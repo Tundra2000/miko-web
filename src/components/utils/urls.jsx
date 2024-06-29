@@ -11,3 +11,8 @@ export const passwordResetResetUrl = `${BASE_URL}password-reset/reset`;
 export const logoutUrl = `${BASE_URL}auth/logout`;
 export const userUrl = `${BASE_URL}auth/user`;
 export const tokenUrl = `${BASE_URL}auth/token`;
+
+
+
+const webApiUrl = "http://localhost:46576/";
+export const todoUrl = webApiUrl + "Todo";

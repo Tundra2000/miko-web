@@ -19,7 +19,7 @@ import Modal from "../modal/modal.jsx";
 import IngredientDetails from "../burger-ingredients/ingredient-details/ingredient-details.jsx";
 //----
 import { WelcomePage } from "../../pages/welcome/welcome-page.jsx";
-import { TodoPage } from "../../pages/todo/todo-page.jsx";
+import { TodoPage } from "../../pages/todo/todo-page.tsx";
 import { Subconscious } from "../../pages/subconscious/subconscious.jsx";
 import { Statistics } from "../../pages/statistics/statistics.jsx";
 import { Finance } from "../../pages/finance/finance.jsx";
