@@ -29,7 +29,7 @@ export function KanbanBoard() {
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
-        distance: 300, //300px
+        distance: 3,
       },
     })
   );
@@ -61,6 +61,7 @@ export function KanbanBoard() {
                   key={col.id}
                   column={col}
                   deleteColumn={deleteColumn}
+                  updateColumn={updateColumn}
                 />
               ))}
             </SortableContext>
@@ -95,6 +96,7 @@ export function KanbanBoard() {
               <ColumnContainer
                 column={activeColumn}
                 deleteColumn={deleteColumn}
+                updateColumn={updateColumn}
               />
             )}
           </DragOverlay>,
@@ -147,6 +149,16 @@ export function KanbanBoard() {
       return arrayMove(columns, activeColumnIndex, overColumnIndex);
     });
   }
+
+  function updateColumn(id: Id, title: string){
+    const newColumns = columns.map((col) => {
+        if (col.id !== id) return col;
+        return { ...col, title };
+    });
+
+    setColumns(newColumns);
+  }
+
 }
 
 function generateId() {
