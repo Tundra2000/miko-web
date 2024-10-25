@@ -63,6 +63,28 @@ export default function AppHeader() {
             className={({ isActive }) =>
               isActive ? styles.link_active : styles.link
             }
+            to={"/kanban-board"}
+          >
+            {({ isActive }) => (
+              <>
+                <ListIcon type={isActive ? "primary" : "secondary"} />
+                <span
+                  className={
+                    isActive
+                      ? styles.text
+                      : styles.text_active
+                  }
+                >
+                  Доска задач
+                </span>
+              </>
+            )}
+          </NavLink>
+
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? styles.link_active : styles.link
+            }
             to={"/finance"}
           >
             {({ isActive }) => (
@@ -124,6 +146,28 @@ export default function AppHeader() {
                   }
                 >
                   Личный кабинет
+                </span>
+              </>
+            )}
+          </NavLink>
+
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? styles.link_active : styles.link
+            }
+            to={"/JuliasIdeas"}
+          >
+            {({ isActive }) => (
+              <>
+                <ProfileIcon type={isActive ? "primary" : "secondary"} />
+                <span
+                  className={
+                    isActive
+                      ? styles.text
+                      : styles.text_active
+                  }
+                >
+                  JuliasIdeas
                 </span>
               </>
             )}

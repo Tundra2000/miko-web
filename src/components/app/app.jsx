@@ -24,6 +24,8 @@ import { Subconscious } from "../../pages/subconscious/subconscious.jsx";
 import { Statistics } from "../../pages/statistics/statistics.jsx";
 import { Finance } from "../../pages/finance/finance.jsx";
 import { Otherworldland } from "../../pages/otherworldland/otherworldland.jsx";
+import { JuliasIdeas} from "../../pages/julias-ideas/julias-ideas.jsx";
+import { KanbanBoardPage } from '../../pages/kanban-board/kanban-board-page.tsx';
 
 
 function App() {
@@ -95,8 +97,10 @@ function App() {
             <Route path="otherworldland" element={<Otherworldland />} />
           </Route>
           <Route path="/todos" element={<TodoPage />} />
+          <Route path="/kanban-board" element={<KanbanBoardPage/>} />
           <Route path="/statistics" element={<Statistics />} />        
-          <Route path="/finance" element={<Finance />} />
+          <Route path="/finance" element={<Finance />} />JuliasIdeas
+          <Route path="/JuliasIdeas" element={<JuliasIdeas />} />
           <Route path="/*" element={<NotFoundPage />} />
           {/*<Route path="ingredients/:id" element={<IngredientPage />} />*/}
         </Routes>

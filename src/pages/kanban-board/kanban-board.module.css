@@ -1,0 +1,15 @@
+
+html,
+body,
+#root {
+    @apply bg-black text-white box-border;
+}
+
+.content {
+    width: 1280px;
+    height: 890px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
